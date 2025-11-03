@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./img/Imagem\ rio.jpg) no-repeat center center/cover;
+}
+
+/* ==== Container principal ==== */
+.container {
+  width: 420px;
+  max-width: 90%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  color: #fff;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==== Título e descrição ==== */
+.container h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+/* ==== Botões alternar Login/Cadastro ==== */
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px 0;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.toggle-btn.active {
+  background-color: #00bfff;
+  color: #002;
+  border-color: #00bfff;
+}
+
+/* ==== Formulários ==== */
+.form {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  animation: fadeIn .3s ease both;
+}
+
+.form.active {
+  display: flex;
+}
+
+.input-Box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-Box input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  transition: border-color 0.3s;
+}
+
+.input-Box input:focus {
+  border-color: #00bfff;
+}
+
+/* ==== Botões de ação ==== */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #00bfff;
+  color: #002;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0090cc;
+}
+
+/* ==== Link de registro ==== */
+.registro {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.registro a {
+  color: #aee9ff;
+  text-decoration: none;
+}
+
+.registro a:hover {
+  text-decoration: underline;
+}
+
+/* ==== animação simples ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* ==== RESPONSIVIDADE ==== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 25px 30px;
+  }
+
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+
+  .toggle-buttons {
+    gap: 6px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .descricao {
+    font-size: 13px;
+  }
+
+  .input-Box input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .toggle-buttons {
+    flex-direction: column;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecte-se com o Mundo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+<!-- Título e descrição -->
+<h1 id="card-title">Bem-vindo!</h1>
+<p id="card-sub" class="descricao">
+  Conecte-se com pessoas do mundo todo! Compartilhe ideias, experiências e histórias,
+  descubra novas amizades e participe de conversas leves e acolhedoras.
+</p>
+
+
+    <!-- Botões alternar -->
+    <div class="toggle-buttons">
+      <button id="btn-login" class="toggle-btn">Login</button>
+      <button id="btn-register" class="toggle-btn">Cadastro</button>
+    </div>
+
+    <!-- Formulário de Login -->
+    <form id="form-login" class="form active" autocomplete="on" novalidate>
+      <div class="input-Box">
+        <input type="text" name="username" placeholder="Usuário" required>
+      </div>
+      <div class="input-Box">
+        <input type="password" name="password" placeholder="Senha" required>
+      </div>
+      <button type="submit" class="btn">Entrar</button>
+      <p class="registro">Não tem conta? <a href="#" id="link-to-login">Cadastre-se</a></p>
+    </form>
+
+    <!-- Formulário de Cadastro -->
+    <form id="form-register" class="form" autocomplete="on" novalidate>
+      <div class="input-Box">
+        <input type="text" name="fullname" placeholder="Nome completo" required>
+      </div>
+      <div class="input-Box">
+        <input type="text" name="username" placeholder="Usuário" required>
+      </div>
+      <div class="input-Box">
+        <input type="email" name="email" placeholder="E-mail" required>
+      </div>
+      <div class="input-Box">
+        <input type="password" name="password" placeholder="Senha (mín. 6 caracteres)" minlength="6" required>
+      </div>
+      <button type="submit" class="btn">Criar conta</button>
+      <p class="registro">Já tem conta? <a href="#" id="link-to-login">Voltar ao login</a></p>
+    </form>
+
+  </div>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
